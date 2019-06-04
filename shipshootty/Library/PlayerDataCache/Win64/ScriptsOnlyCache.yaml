@@ -1,6 +1,8 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp-firstpass.dll:
+    - UnityStandardAssets.Effects.ExplosionPhysicsForce
+    - UnityStandardAssets.Effects.ParticleSystemMultiplier
     - UnityStandardAssets.Water.GerstnerDisplace
     - UnityStandardAssets.Water.PlanarReflection
     - UnityStandardAssets.Water.SpecularLighting
@@ -8,6 +10,11 @@ ScriptsOnlyBuild:
     - UnityStandardAssets.Water.WaterTile
     Assembly-CSharp.dll:
     - BoatController
+    - CannonController
+    - DestroyAfterTime
+    - EnemyGunController
+    - enemyController
+    - gameController
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
   sceneClasses:
@@ -47,20 +54,38 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9506}
+      Script: {instanceID: 9296}
     - Class: 114
-      Script: {instanceID: 10028}
+      Script: {instanceID: 9310}
     - Class: 114
-      Script: {instanceID: 10196}
+      Script: {instanceID: 9504}
     - Class: 114
-      Script: {instanceID: 10648}
+      Script: {instanceID: 9926}
     - Class: 114
-      Script: {instanceID: 10702}
+      Script: {instanceID: 10030}
     - Class: 114
-      Script: {instanceID: 10816}
+      Script: {instanceID: 10198}
+    - Class: 114
+      Script: {instanceID: 10650}
+    - Class: 114
+      Script: {instanceID: 10704}
+    - Class: 114
+      Script: {instanceID: 10818}
+    - Class: 114
+      Script: {instanceID: 20136}
+    - Class: 114
+      Script: {instanceID: 20366}
+    - Class: 114
+      Script: {instanceID: 25078}
+    - Class: 114
+      Script: {instanceID: 53528}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 258
       Script: {instanceID: 0}
@@ -745,6 +770,12 @@ ScriptsOnlyBuild:
     className: ActivateTrigger
   - hash:
       serializedVersion: 2
+      Hash: a547c598e1420800e4bb553647b51f9e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CannonController
+  - hash:
+      serializedVersion: 2
       Hash: 4bd1cc3c85989d2213a9a8fd9d09e63f
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.CrossPlatformInput
@@ -1231,7 +1262,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: cde5da6d26bb2db2223f12f9599e616a
+      Hash: a9cf79d4d1c28d7836dc7eb73b21f165
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BoatController
@@ -1253,7 +1284,31 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
+  - hash:
+      serializedVersion: 2
+      Hash: 5d8e0dfac0836e5c54897c8b5c136fe2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: enemyController
+  - hash:
+      serializedVersion: 2
+      Hash: 82c196ebf66a54bfde1d74bbbed297de
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyGunController
+  - hash:
+      serializedVersion: 2
+      Hash: d3bbd1f86b55a6168b664522b2cf57b3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DestroyAfterTime
+  - hash:
+      serializedVersion: 2
+      Hash: c26b216cd49b7fc33d1d96b1057f6348
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: gameController
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: E:/Ville/Projktit/Unity/shipshoottyy/shipshootty/Builds/shipshootty.exe
+  playerPath: E:/Ville/Projktit/Unity/shipshoottyy/shipshootty/Build/shipshootty.exe

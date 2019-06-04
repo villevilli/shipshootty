@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CannonController : MonoBehaviour
 {                                      
-    public Vector3 rayCastLocation;
+    public float shotDelay;
+    public GameObject explosionPrefab;
 
     int floorMask;                      
-    float camRayLength = 100f;
     Rigidbody rb;
 
     void Awake()
@@ -18,7 +18,25 @@ public class CannonController : MonoBehaviour
 
     void Update()
     {
-    	
+    	if (Input.GetButtonDown("Fire1"))
+    	{
+    		RaycastHit hit;
+
+    		if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity) && hit.collider.tag == "Enemy")
+    		{
+    			Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward)*100, Color.green);
+    			Instantiate (explosionPrefab, hit.point, Quaternion.identity);
+    			enemyController enemyController = hit.collider.GetComponent <enemyController> ();
+    			if (enemyController != null)
+    			{
+    				enemyController.takeDamage (1);
+    			}
+    		}
+    		else
+    		{
+        		Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward)*100, Color.green);
+    		}
+    	}
     }
 
     void FixedUpdate()
@@ -38,7 +56,7 @@ public class CannonController : MonoBehaviour
     		playerToMouse.y = 0.0f; 
     		Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
     		rb.MoveRotation(newRotation);
-    		Debug.Log(newRotation);
+    		//Debug.Log(newRotation);
             
         }
     }
